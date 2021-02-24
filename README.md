@@ -1,20 +1,34 @@
-# SCSS-Grid
-SCSS를 활용한 Grid 구성
-Descktop First로 PC를 먼저 작업 후 적용하면 된다.
-개인적으로 사용하기 위해 만들었기 때문에 일반적인 사용방식과는 다른게 많을 수 있다.
-
-SCSS는 VSCode를 사용해 컴파일 했다.
+# SASS-Flex-Grid
+Desktop First로 PC 기반 그리드입니다.<br>
+개인 용도로 만들었기 때문에 퀄리티가 낮을 수 있습니다.
 
 ---
 
 ## 기본값
 
-1. 기본 컨테이너 크기 : 1200px
-2. 컬럼 사이 간격 : 30px
+1. Container : 1200px
+2. Gutter : 30px
 
-## 브러우저 지원
+## 변수
 
-- IE10 이상
-- 기본 모던 브라우저 지원
+1. **$container**
+컨테이너 기준 크기 기정
+2. **$gutter**
+컬럼 사이 거터 크기 지정
+3. **desktop**
+PC 기준 크기, 지정한 값 **이상**에서 작동
+4. **$tablet**
+Tablet 기준 크기, 지정한 값 **이하**에서 작동
+5. **$mobile**
+Mobile 기준 크기, 지정한 값 **이하**에서 작동
 
-상세 정보는 `.vscode` > `settings.json` 파일 참고
+## 기본 사용
+```html
+<div class="container">
+	<div class="row">
+		<div class="col-6 col-tb-8 col-mo-2">PC 6, Tablet 8, Mobile 2</div>
+
+		<div class="col-6 col-tb-4 col-mo-10">PC 6, Tablet 4, Mobile 10</div>
+	</div>
+</div>
+```

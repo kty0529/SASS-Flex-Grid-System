@@ -1,6 +1,7 @@
 @charset 'UTF-8';
-$container-width: 1200px;
-$column-gap: 30px;
+
+$container: 1200px;
+$gutter: 30px;
 
 $descktop: 1024px;
 $tablet: 768px;
@@ -14,10 +15,10 @@ $mobile: 375px;
 		right: auto;
 	}
 	padding: {
-		left: #{$column-gap / 2};
-		right: #{$column-gap / 2};
+		left: #{$gutter / 2};
+		right: #{$gutter / 2};
 	}
-	max-width: $container-width;
+	max-width: $container;
 	width: 100%;
 
 	&.reverse {
@@ -41,8 +42,8 @@ $mobile: 375px;
 .row {
 	display: flex;
 	flex-direction: column;
-	margin-left: -#{$column-gap / 2};
-	margin-right: -#{$column-gap / 2};
+	margin-left: -#{$gutter / 2};
+	margin-right: -#{$gutter / 2};
 
 	&.reverse {
 		flex-direction: column-reverse;
@@ -82,8 +83,8 @@ $columns: (
 	.col-mo-#{$key}, .col-mo-offset-#{$key},
 	.col-sm-#{$key}, .col-sm-offset-#{$key} {
 		flex: 1 1 0px;
-		padding-left: #{$column-gap / 2};
-		padding-right: #{$column-gap / 2};
+		padding-left: #{$gutter / 2};
+		padding-right: #{$gutter / 2};
 		min-height: 1px;
 	}
 
