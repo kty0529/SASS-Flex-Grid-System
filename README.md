@@ -11,15 +11,15 @@ Desktop First로 PC 기반 그리드입니다.<br>
 
 ## 변수
 
-1. **$container**
+1. **$container**<br>
 컨테이너 기준 크기 기정
-2. **$gutter**
+2. **$gutter**<br>
 컬럼 사이 거터 크기 지정
-3. **desktop**
+3. **desktop**<br>
 PC 기준 크기, 지정한 값 **이상**에서 작동
-4. **$tablet**
+4. **$tablet**<br>
 Tablet 기준 크기, 지정한 값 **이하**에서 작동
-5. **$mobile**
+5. **$mobile**<br>
 Mobile 기준 크기, 지정한 값 **이하**에서 작동
 
 ## 기본 사용
