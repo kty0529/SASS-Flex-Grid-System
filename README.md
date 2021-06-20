@@ -1,6 +1,8 @@
 # SASS-Flex-Grid
-Desktop First로 PC 기반 그리드입니다.<br>
-개인 용도로 만들었기 때문에 퀄리티가 낮을 수 있습니다.
+**PC 기반 Flexbox Grid System**입니다.
+<br>개인 용도로 만들었기 때문에 상상 그 이하의 퀄리티 일 수 있습니다.
+<br>
+<br>responsive-grid는 반응형을, fixed-grid는 고정형을 지원합니다.
 
 ---
 

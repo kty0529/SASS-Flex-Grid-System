@@ -1,12 +1,10 @@
 @charset 'UTF-8';
 
-$container: 1200px;
-$gutter: 30px;
+// 공통 값 import
+@import './helpers/variables';
 
-$descktop: 1024px;
-$tablet: 768px;
-$mobile: 375px;
 
+// 기본값
 .container {
 	display: flex;
 	flex-direction: column;
@@ -62,21 +60,8 @@ $mobile: 375px;
 	}
 }
 
-$columns: (
-	'1': 8.333333%,
-	'2': 16.666666%,
-	'3': 25%,
-	'4': 33.333333%,
-	'5': 41.666666%,
-	'6': 50%,
-	'7': 58.333333%,
-	'8': 66.666666%,
-	'9': 75%,
-	'10': 83.333333%,
-	'11': 91.666666%,
-	'12': 100%,
-);
 
+// 기본 제어
 @each $key, $value in $columns {
 	.col-#{$key}, .col-offset-#{$key},
 	.col-tb-#{$key}, .col-tb-offset-#{$key},
@@ -96,9 +81,7 @@ $columns: (
 }
 
 
-/**
- * Table
- */
+// 테블릿 기기 제어
 @media all and (max-width: #{$descktop - 1}) {
 	@each $key, $value in $columns {
 		.col-#{$key} { width: 100%; }
@@ -111,9 +94,7 @@ $columns: (
 }
 
 
-/**
- * Moblie
- */
+// 모바일 기준 제어
 @media all and (max-width: #{$tablet - 1}) {
 	@each $key, $value in $columns {
 		.col-tb-#{$key} { width: 100%; }
@@ -126,9 +107,7 @@ $columns: (
 }
 
 
-/**
- * Small
- */
+// 모바일 기준보다 작은 디바이스 제어
 @media all and (max-width: #{$mobile - 1}) {
 	@each $key, $value in $columns {
 		.col-mo-#{$key} { width: 100%; }
@@ -141,9 +120,8 @@ $columns: (
 }
 
 
-/**
- * Hide to Small Device
- */
+// 320px 미만의 기기에선 사이트 숨김,
+// 불필요 할 경우 제거
 @media all and (max-width: 319px) {
 	html, body { display: none; }
 }
