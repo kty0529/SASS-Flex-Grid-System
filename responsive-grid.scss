@@ -31,8 +31,6 @@ $columns: (
 
 // 기본값
 .container {
-	display: flex;
-	flex-direction: column;
 	margin: {
 		left: auto;
 		right: auto;
@@ -44,18 +42,6 @@ $columns: (
 	max-width: $container;
 	width: 100%;
 
-	&.reverse {
-		flex-direction: column-reverse;
-	}
-
-	&.row {
-		flex-direction: row;
-
-		&.reverse {
-			flex-direction: row-reverse;
-		}
-	}
-
 	&-fluid {
 		@extend .container;
 		max-width: inherit;
@@ -64,20 +50,26 @@ $columns: (
 
 .row {
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
+	flex-direction: row;
 	margin-left: -#{$gutter / 2};
 	margin-right: -#{$gutter / 2};
 
 	&.reverse {
-		flex-direction: column-reverse;
+		flex-direction: row-reverse;
 	}
 
-	&.row {
-		flex-direction: row;
+	&-hidden {
+		display: none;
+	}
+}
 
-		&.reverse {
-			flex-direction: row-reverse;
-		}
+.col {
+	@extend .row;
+	flex-direction: column;
+
+	&.reverse {
+		flex-direction: column-reverse;
 	}
 
 	&-hidden {
@@ -100,9 +92,6 @@ $columns: (
 
 	.col-#{$key} { width: #{$value}; }
 	.col-offset-#{$key} { margin-left: #{$value}; }
-}
-.col-hidden {
-	display: none;
 }
 
 
