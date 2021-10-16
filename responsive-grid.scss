@@ -41,10 +41,12 @@ $columns: (
 	}
 	max-width: $container;
 	width: 100%;
+}
 
-	&-fluid {
-		@extend .container;
-		max-width: inherit;
+.container-fluid {
+	padding: {
+		left: #{$gutter / 2};
+		right: #{$gutter / 2};
 	}
 }
 
